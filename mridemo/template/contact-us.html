@@ -1,0 +1,493 @@
+{% include 'header.html' %}
+      <!------------------------------------------------
+		navigation - end
+		------------------------------------------------>
+      <main class="main">
+        <!------------------------------------------------
+		    page header - start
+		    ------------------------------------------------>
+        <div class="page-header bg-more-light">
+          <div class="container">
+            <h2 class="page-title">Contact us</h2>
+            <nav aria-label="breadcrumb" class="breadcrumb-nav">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active">
+                  <a href="index.html">Pages</a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">
+                  Contact Us
+                </li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+        <!------------------------------------------------
+		    page header - end
+		    ------------------------------------------------>
+        <!------------------------------------------------
+		    contact details - start
+		    ------------------------------------------------>
+        <div class="container contact-detail-section padding-small">
+          <div class="row d-flex justify-content-center">
+            <div class="col-lg-12 col-sm-8 col-10">
+              <h2 class="ls-n-20 text-center section-heading">
+                We are here to help you.
+              </h2>
+            </div>
+          </div>
+          <div class="row d-flex justify-content-center">
+            <div class="col-lg-4 col-sm-8 col-10">
+              <div class="icon-box icon-box-simple">
+                <figure>
+                  <a class="icon-image"><i class="fal fa-phone"></i></a>
+                </figure>
+                <div class="icon-box-content text-center">
+                  <p class="box-info mb-0">Please call on</p>
+                  <h4 class="box-title mb-0">(888) 303-6699</h4>
+                  <p class="box-desc ls-0 mb-0">to get support.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-8 col-10">
+              <div class="icon-box icon-box-simple">
+                <figure>
+                  <a class="icon-image"><i class="fal fa-envelope-open"></i></a>
+                </figure>
+                <div class="icon-box-content text-center">
+                  <p class="box-info mb-0">Please email on</p>
+                  <h4 class="box-title mb-0">info@mindsift.com</h4>
+                  <p class="box-desc ls-0 mb-0">to get support.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-sm-8 col-10">
+              <div class="icon-box icon-box-simple">
+                <figure>
+                  <a class="icon-image"
+                    ><i class="fal fa-map-marker-alt"></i
+                  ></a>
+                </figure>
+                <div class="icon-box-content text-center">
+                  <p class="box-info mb-0">Mindsift Pty Ltd.</p>
+                  <h4 class="box-title mb-0">1201 King Street</h4>
+                  <p class="box-desc ls-0 mb-0">Melbourne, Australia.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!------------------------------------------------
+		    contact details - end
+		    ------------------------------------------------>
+        <!------------------------------------------------
+		    map section - start
+		    ------------------------------------------------>
+        <!--<div
+          class="container contact-map-section position-relative padding-small"
+        >
+          <div
+            id="map"
+            style="
+              height: 684px;
+              background-color: #f4f4f4;
+              border-radius: 30px;
+            "
+          ></div>
+          <div class="card-contact card-rating">
+            <p class="card-info ls-0">Coming for a visit or a coffee?</p>
+            <div class="btn-link">
+              <a href="#">Get Direction</a><i class="far fa-caret-right"></i>
+            </div>
+          </div>
+        </div>-->
+        <!------------------------------------------------
+		    map section - end
+		    ------------------------------------------------>
+        <!------------------------------------------------
+		    contact form section - start
+		    ------------------------------------------------>
+        <div class="container contact-form-section padding-small">
+          <div class="row d-flex justify-content-center">
+            <div class="col-lg-12 col-sm-8 col-10">
+              <h2 class="ls-n-20 text-center section-heading">
+                Got questions?<br />Write us a message.
+              </h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-8 offset-sm-2 col-10 offset-1">
+              <form method="post" action="{% url 'saveenquiry' %}" id="" class="book-form book-form-contact">
+                {% csrf_token %}
+                <div class="row row-joined">
+                  <div class="col-sm-12 col-lg-6 mt-2">
+                    <div class="input-group input-light">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Name *"
+                        name="name"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-lg-6 mt-2">
+                    <div class="input-group input-light">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Subject"
+                        name="subject"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-lg-6 mt-2">
+                    <div class="input-group input-light">
+                      <input
+                        type="email"
+                        class="form-control"
+                        placeholder="Email *"
+                        name="email"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-lg-6 mt-2">
+                    <div class="input-group input-light">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Relationship to the Person"
+                        name="relationship"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="col-lg-12 mt-2">
+                    <div class="input-group input-light">
+                      <textarea
+                        class="form-control text-area"
+                        placeholder="Message *"
+                        name="message"
+                        required
+                      ></textarea>
+                    </div>
+                  </div>
+                </div>
+                <button
+                  type="submit"
+                  class="btn btn-secondary-color btn-form d-flex mr-auto ml-auto mb-1" 
+                >
+                  <span>Send Message</span>
+                </button>               
+              </form>
+            </div>
+          </div>
+        </div>
+        <!------------------------------------------------
+		    contact form section - end
+		    ------------------------------------------------>
+
+        <!-- Button trigger modal -->
+
+
+
+          
+    </main>
+
+    
+     
+      <!------------------------------------------------
+		footer - start
+		------------------------------------------------>
+      <footer class="footer bg-primary-color">
+        <div class="container">
+          <div class="footer-top">
+            <div class="row d-flex align-items-center justify-content-center">
+              <div class="col-lg-6 col-sm-7 col-10"></div>
+              <div
+                class="col-lg-6 col-sm-7 col-10 d-lg-flex justify-content-lg-end"
+              >
+                <div class="social-links">
+                  <a href="#" class="social-link"
+                    ><i class="fab fa-twitter"></i><span>Twitter</span></a
+                  >
+                  <a href="#" class="social-link"
+                    ><i class="fab fa-facebook"></i><span>Facebook</span></a
+                  >
+                  <a href="#" class="social-link"
+                    ><i class="fab fa-youtube"></i><span>Youtube</span></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer-middle">
+            <div class="container">
+              <div class="row d-flex justify-content-center">
+                <div class="col-lg-3 col-sm-7 col-10">
+                  <div class="info-box">
+                    <h6 class="info-title">Company</h6>
+                    <ul class="info-list">
+                      <li><a href="#" class="info-link">About</a></li>
+                      <li><a href="#" class="info-link">Our Doctors</a></li>
+                      <li><a href="#" class="info-link">Latest Blog</a></li>
+                      <li><a href="#" class="info-link">Careers</a></li>
+                      <li><a href="#" class="info-link">Contact</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-sm-7 col-10">
+                  <div class="info-box">
+                    <h6 class="info-title">Support</h6>
+                    <ul class="info-list">
+                      <li><a href="#" class="info-link">Reviews</a></li>
+                      <li><a href="#" class="info-link">FAQs</a></li>
+                      <li><a href="#" class="info-link">Help Center</a></li>
+                      <li><a href="#" class="info-link">Doctors</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-sm-7 col-10">
+                  <div class="info-box">
+                    <h6 class="info-title">Legal</h6>
+                    <ul class="info-list">
+                      <li><a href="#" class="info-link">Term of use</a></li>
+                      <li><a href="#" class="info-link">Code of Conduct</a></li>
+                      <li><a href="#" class="info-link">Privacy Policy</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-sm-7 col-10">
+                  <div class="info-box">
+                    <h6 class="info-title">Company</h6>
+                    <form class="input-group input-footer">
+                      <input
+                        type="email"
+                        class="form-control"
+                        placeholder="Email address"
+                        required
+                      />
+                      <button type="submit" class="form-action">
+                        <i class="fas fa-check-circle"></i>
+                      </button>
+                    </form>
+                    <p>Unsubscribe anytime.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <div class="row d-flex justify-content-center">
+              <div class="col-lg-12 col-sm-7 col-10">
+                <p>© GFXPARTNER</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!------------------------------------------------
+		footer - end
+		------------------------------------------------>
+    </div>
+
+    <button id="scroll-top" title="Back to Top">
+      <i class="fal fa-angle-up"></i>
+    </button>
+
+    <div class="mobile-menu-overlay"></div>
+
+    <div class="mobile-menu-container mobile-menu-light">
+      <div class="mobile-menu-wrapper">
+        <span class="mobile-menu-close"><i class="fal fa-times"></i></span>
+
+        <form class="input-group input-light input-search" action="#">
+          <input
+            type="text"
+            class="form-control search-control"
+            placeholder="search"
+            required
+          />
+          <button type="submit" class="btn-search">
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+
+        <nav class="mobile-nav mt-5">
+          <ul class="mobile-menu">
+            <li>
+              <a href="#" class="sf-with-ul">Home Pages</a>
+
+              <ul>
+                <li><a href="index.html">Home 1</a></li>
+                <li><a href="index-2.html">Home 2</a></li>
+                <li><a href="index-3.html">Home 3</a></li>
+                <li><a href="index-4.html">Home 4</a></li>
+                <li><a href="index-5.html">Home 5</a></li>
+                <li><a href="index-6.html">Home 6</a></li>
+                <li><a href="index-7.html">Home 7</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class="sf-with-ul">Standard Pages</a>
+              <ul>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="doctors.html">Our Doctors</a></li>
+                <li><a href="doctors-detailed.html">Doctor (Detailed)</a></li>
+                <li><a href="departments-1.html">Departments (Style 01)</a></li>
+                <li><a href="departments-2.html">Departments (Style 02)</a></li>
+                <li>
+                  <a href="departments-detailed.html">Departments (Detailed)</a>
+                </li>
+                <li><a href="treatments.html">Treatments</a></li>
+                <li><a href="how-it-works.html">How it Works</a></li>
+                <li><a href="help.html">Help</a></li>
+                <li><a href="help-questions.html">Help Questions</a></li>
+                <li><a href="membership.html">Membership</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="contact-us.html">Contact</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class="sf-with-ul">Blog Pages</a>
+              <ul>
+                <li><a href="blog-masonry.html">Blog Masonry</a></li>
+                <li>
+                  <a href="blog-right-sidebar.html"
+                    >Blog Masonry (Right Sidebar)</a
+                  >
+                </li>
+                <li>
+                  <a href="blog-left-sidebar.html"
+                    >Blog Masonry (Left Sidebar)</a
+                  >
+                </li>
+                <li><a href="blog-detailed.html">Blog Detailed</a></li>
+                <li>
+                  <a href="blog-detailed-sidebar.html">Blog Detailed Sidebar</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class="sf-with-ul">Appointments</a>
+              <ul>
+                <li>
+                  <a href="appointment-step1.html">Appointment (Step01)</a>
+                </li>
+                <li>
+                  <a href="appointment-step2.html">Appointment (Step02)</a>
+                </li>
+                <li>
+                  <a href="appointment-step3.html">Appointment (Step03)</a>
+                </li>
+                <li>
+                  <a href="appointment-step4.html">Appointment (Step04)</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class="sf-with-ul">Login Pages</a>
+              <ul>
+                <li><a href="login.html">Signin</a></li>
+                <li><a href="signup.html">Signup</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <!-- End .mobile-nav -->
+
+        <div class="social-icons mt-6">
+          <a href="#" class="social-icon" target="_blank" title="Twitter"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <a href="#" class="social-icon" target="_blank" title="Facebook"
+            ><i class="fab fa-facebook"></i
+          ></a>
+          <a href="#" class="social-icon" target="_blank" title="Youtube"
+            ><i class="fab fa-youtube"></i
+          ></a>
+        </div>
+        <!-- End .social-icons -->
+
+        <div class="mobile-actions">
+          <a
+            href="appointment-step1.html"
+            class="btn btn-secondary-color btn-xs"
+            >Book Appointment</a
+          >
+          <a href="login.html" class="btn btn-xs">Signin</a>
+        </div>
+        <!-- End .mobile-actions -->
+      </div>
+      <!-- End .mobile-menu-wrapper -->
+    </div>
+    <!-- End .mobile-menu-container -->
+
+    <!-- Google Map -->
+    <script src="http://maps.googleapis.com/maps/api/js?key"></script>
+
+    <!-- Plugins JS File -->
+    <script src="/static/assets/js/jquery.min.js"></script>
+    <script src="/static/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/assets/js/jquery.waypoints.min.js"></script>
+    <script src="/static/assets/js/plugins/owl.carousel.min.js"></script>
+    <script src="/static/assets/js/plugins/datepicker.min.js"></script>
+    <script src="/static/assets/js/plugins/imagesloaded.pkgd.min.js"></script>
+    <script src="/static/assets/js/plugins/isotope.pkgd.min.js"></script>
+    <!--Added-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+    <!-- Main JS File -->
+    <script src="/static/assets/js/main.min.js"></script>
+
+    <script>
+      // Google Map api v3 - Map for contact pages
+      if (document.getElementById("map") && typeof google === "object") {
+        var content =
+          "<address>" +
+          "88 Pine St,<br>" +
+          "New York, NY 10005, USA<br>" +
+          '<a href="#" class="direction-link" target="_blank">Get Directions <i class="icon-angle-right"></i></a>' +
+          "</address>";
+
+        var latLong = new google.maps.LatLng(40.8127911, -73.9624553);
+
+        var map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 14,
+          center: latLong, // Map Center coordinates
+          scrollwheel: false,
+          mapTypeId: google.maps.MapTypeId.ROADMAP,
+        });
+
+        var infowindow = new google.maps.InfoWindow({
+          content: content,
+          maxWidth: 360,
+        });
+
+        var marker;
+        marker = new google.maps.Marker({
+          position: latLong,
+          map: map,
+          animation: google.maps.Animation.DROP,
+        });
+
+        google.maps.event.addListener(
+          marker,
+          "click",
+          (function (marker) {
+            return function () {
+              infowindow.open(map, marker);
+            };
+          })(marker)
+        );
+      }
+    </script>
+
+    <!--For Model-->
+   
+    
+  </body>
+</html>

@@ -1,0 +1,139 @@
+{% include 'header.html' %}
+<!------------------------------------------------
+		navigation - end
+		------------------------------------------------>
+<main class="main">
+  <!------------------------------------------------
+			page header - start
+			------------------------------------------------>
+  <div class="page-header bg-more-light">
+    <div class="container">
+      <h2 class="page-title">Get help</h2>
+      <nav aria-label="breadcrumb" class="breadcrumb-nav">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active">
+            <a href="index.html">Pages</a>
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">Help</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+  <!------------------------------------------------
+			page header - end
+			------------------------------------------------>
+  <!------------------------------------------------
+			article detailed section - start
+			------------------------------------------------>
+  <div class="container article-detailed-section">
+    <div class="row">
+      <div class="col-lg-8 offset-lg-0 col-sm-8 offset-sm-2 col-10 offset-1">
+        <div class="accordion accordion-icon" id="accordion-10">
+          {% for i in faqData %}
+          <div class="field">
+            <div class="field-header" id="heading10-7">
+              <h4 class="field-title">
+                <a
+                  class="accordion-link collapsed"
+                  role="button"
+                  data-toggle="collapse"
+                  href="#collapse10-7"
+                  aria-expanded="false"
+                  aria-controls="collapse10-7"
+                >
+                  {{i.faq_title}}
+                </a>
+              </h4>
+            </div>
+            <div
+              id="collapse10-7"
+              class="collapse"
+              aria-labelledby="heading10-7"
+              data-parent="#accordion-10"
+            >
+              <div class="field-body">
+                <p class="mb-4">{{i.faq_desc}}</p>
+              </div>
+            </div>
+          </div>
+          <!--Previous Code-->
+          <!-- <div class="field active">
+            <div class="field-header" id="heading10-1">
+              <h4 class="field-title">
+                <a
+                  class="accordion-link"
+                  role="button"
+                  data-toggle="collapse"
+                  href="#collapse10-1"
+                  aria-expanded="true"
+                  aria-controls="collapse10-1"
+                >
+                  Can medical forms, such as school be filled out?
+                </a>
+              </h4>
+            </div>
+            <div
+              id="collapse10-1"
+              class="collapse show"
+              aria-labelledby="heading10-1"
+              data-parent="#accordion-10"
+            >
+              <div class="field-body">
+                <p class="mb-4">
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                  Donec odio. Quisque volutpat mattis eros. Nullam malesuada
+                  erat ut turpis. Suspendisse urna nibh, viverra non, semper
+                  suscipit, posuere a, pede. Donec nec justo eget felis
+                  facilisis fermentum.
+                </p>
+              </div>
+            </div>
+          </div> -->
+          {% endfor %}
+
+          <!-- <div class="field">
+            <div class="field-header" id="heading10-7">
+              <h4 class="field-title">
+                <a
+                  class="accordion-link collapsed"
+                  role="button"
+                  data-toggle="collapse"
+                  href="#collapse10-7"
+                  aria-expanded="false"
+                  aria-controls="collapse10-7"
+                >
+                  Do I need an appointment?
+                </a>
+              </h4>
+            </div>
+            <div
+              id="collapse10-7"
+              class="collapse"
+              aria-labelledby="heading10-7"
+              data-parent="#accordion-10"
+            >
+              <div class="field-body">
+                <p class="mb-4">
+                  Nullam malesuada erat ut turpis. Suspendisse urna nibh,
+                  viverra non, semper suscipit, posuere a, pede. Donec nec justo
+                  eget felis facilisis fermentum.Lorem ipsum dolor sit amet,
+                  consectetuer adipiscing elit. Donec odio. Quisque volutpat
+                  mattis eros. Lorem ipsum dolor sit amet, consectetuer
+                  adipiscing elit. Donec odio. Quisque volutpat mattis eros.
+                </p>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!------------------------------------------------
+			article detailed section - end
+			------------------------------------------------>
+</main>
+<!------------------------------------------------
+		footer - start
+		------------------------------------------------>
+{% include 'footer.html' %}

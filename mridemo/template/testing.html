@@ -1,0 +1,31 @@
+<!-- classification.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Classification Result</title>
+  </head>
+  <body>
+    <h1>Image Classification Result</h1>
+
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      <label for="image">Upload MRI Image:</label>
+      <input type="file" name="image" id="image" accept="image/*" />
+      <button type="submit">Classify</button>
+    </form>
+
+    {% if uploaded_file_url %}
+    <h2>Uploaded Image:</h2>
+    <img
+      src="{{ uploaded_file_url }}"
+      alt="Uploaded MRI Image"
+      style="max-width: 400px"
+    />
+    {% endif %} {% if predicted_label %}
+    <h2>Classification Result:</h2>
+    <p>The image is classified as: {{ predicted_label }}</p>
+    {% endif %}
+  </body>
+</html>

@@ -1,0 +1,416 @@
+{% include 'header.html' %}
+<!------------------------------------------------
+		navigation - end
+		------------------------------------------------>
+<main class="main">
+  <!------------------------------------------------
+		    page header - start
+		    ------------------------------------------------>
+  <div class="page-header bg-more-light">
+    <div class="container">
+      <h2 class="page-title">Book appointment</h2>
+      <nav aria-label="breadcrumb" class="breadcrumb-nav">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active">
+            <a href="index.html">Pages</a>
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">
+            Book Appointment
+          </li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+  <!------------------------------------------------
+		    page header - end
+		    ------------------------------------------------>
+  <!------------------------------------------------
+		    step bar - start
+		    ------------------------------------------------>
+  <div class="bg-secondary-color">
+    <div class="container">
+      <div class="step-bar">
+        <div class="steps-progress">
+          <div class="progress-indicator" style="width: 100%"></div>
+        </div>
+        <ul class="nav-step">
+          <li class="nav-item completed">
+            <div class="nav-link">
+              <div class="check-circle"><i class="fas fa-check"></i></div>
+              <span>Select a doctor</span>
+            </div>
+          </li>
+          <li class="nav-item completed">
+            <div class="nav-link">
+              <div class="check-circle"><i class="fas fa-check"></i></div>
+              <span>Create profile</span>
+            </div>
+          </li>
+          <li class="nav-item active">
+            <div class="nav-link">
+              <div class="check-circle">3</div>
+              <span>Pay and finish</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!------------------------------------------------
+		    step bar - end
+		    ------------------------------------------------>
+  <!------------------------------------------------
+		    content - start
+		    ------------------------------------------------>
+  <div class="container apppointment-step-3-section">
+    <div class="row">
+      <div class="col-lg-12 offset-lg-0 col-sm-8 offset-sm-2 col-10 offset-1">
+        <h2 class="ls-n-20 line-height-1">Pay and finish</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-8 offset-lg-0 col-sm-8 offset-sm-2 col-10 offset-1">
+        <div>
+          <h4 class="sub-title">Choose how you'll pay</h4>
+          <span>100% money back guarantee.</span>
+          <div class="payment-tab mt-3 mb-5">
+            <ul class="nav nav-tabs" id="tabs-1" role="tablist">
+              <li class="nav-item">
+                <a
+                  class="nav-link-custom active"
+                  id="tab-1-tab"
+                  data-toggle="tab"
+                  href="#tab-1"
+                  role="tab"
+                  aria-controls="tab-1"
+                  aria-selected="true"
+                >
+                  <span class="nav-check ls-0"
+                    ><i class="fas fa-check"></i
+                  ></span>
+                  With Insurance
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link-custom custom-1"
+                  id="tab-2-tab"
+                  data-toggle="tab"
+                  href="#tab-2"
+                  role="tab"
+                  aria-controls="tab-2"
+                  aria-selected="false"
+                >
+                  <span class="nav-check ls-0"
+                    ><i class="fas fa-check"></i
+                  ></span>
+                  Without Insurance
+                </a>
+              </li>
+            </ul>
+            <div class="tab-content" id="tab-content-1">
+              <div
+                class="tab-pane fade show active"
+                id="tab-1"
+                role="tabpanel"
+                aria-labelledby="tab-1-tab"
+              >
+                <form action="#">
+                  <div class="row row-joined">
+                    <div class="col-md-12 col-lg-6">
+                      <div class="input-group input-light first-name">
+                        <h6 class="input-title mt-0">Name</h6>
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="First"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-12 col-lg-6">
+                      <div class="input-group input-light last-name">
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Last"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-lg-12">
+                      <div class="input-group input-light">
+                        <h6 class="input-title">Date of Birth</h6>
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="mm/dd/yy"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-lg-12">
+                      <div class="input-group input-light">
+                        <h6 class="input-title">Insurance Provider</h6>
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Search (e.g. Anthem)"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-lg-12">
+                      <div class="input-group input-light">
+                        <h6 class="input-title">Member ID</h6>
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="JQ212FS232"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-lg-12 d-lg-flex">
+                      <a href="#" class="btn btn-more-light btn-form">
+                        <span>Cancel</span>
+                      </a>
+                      <button
+                        type="submit"
+                        class="btn btn-secondary-color btn-form"
+                      >
+                        <span>Submit</span>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="tab-2"
+                role="tabpanel"
+                aria-labelledby="tab-2-tab"
+              >
+                <div class="row row-joined">
+                  <div class="col-md-12 col-lg-6">
+                    <div class="input-group input-light first-name">
+                      <h6 class="input-title mt-0">Name</h6>
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="First"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-12 col-lg-6">
+                    <div class="input-group input-light last-name">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Last"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="input-group input-light">
+                      <h6 class="input-title">Date of Birth</h6>
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="mm/dd/yy"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="input-group input-light">
+                      <h6 class="input-title">Member ID</h6>
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="JQ212FS232"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-lg-12 d-flex">
+                    <a
+                      href="appointment-step4.html"
+                      class="btn btn-more-light btn-form"
+                    >
+                      <span>Cancel</span>
+                    </a>
+                    <a
+                      href="appointment-step4.html"
+                      class="btn btn-secondary-color btn-form"
+                    >
+                      <span>Submit</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h4 class="sub-title sub-title-1">Payment info</h4>
+          <span>We accept all creditcards.</span>
+          <form class="appoint-form mt-3 mb-5">
+            <div class="row row-joined">
+              <div class="col-md-12 col-lg-6">
+                <div class="input-group input-light">
+                  <h6 class="input-title mt-0">Cardholder Name</h6>
+                  <input type="text" class="form-control" placeholder="First" />
+                </div>
+              </div>
+              <div class="col-md-12 col-lg-6">
+                <div class="input-group input-light input-second">
+                  <input type="text" class="form-control" placeholder="Last" />
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="input-group input-light">
+                  <h6 class="input-title">Card Number</h6>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="xxxx-xxxx-xxxx"
+                  />
+                </div>
+              </div>
+              <div class="col-md-12 col-lg-6">
+                <div class="input-group input-light">
+                  <h6 class="input-title">Expiry Date</h6>
+                  <div class="form-control select-control">
+                    Month<i class="far fa-angle-down"></i>
+                  </div>
+                  <ul class="option-menu">
+                    <li class="option-list">
+                      <span class="option"
+                        ><i class="far fa-caret-right"></i>January</span
+                      >
+                    </li>
+                    <li class="option-list">
+                      <span class="option"
+                        ><i class="far fa-caret-right"></i>February</span
+                      >
+                    </li>
+                    <li class="option-list">
+                      <span class="option"
+                        ><i class="far fa-caret-right"></i>March</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-12 col-lg-6 mt-2">
+                <div class="input-group input-light input-second">
+                  <div class="form-control select-control">
+                    Year<i class="far fa-angle-down"></i>
+                  </div>
+                  <ul class="option-menu">
+                    <li class="option-list">
+                      <span class="option"
+                        ><i class="far fa-caret-right"></i>2018</span
+                      >
+                    </li>
+                    <li class="option-list">
+                      <span class="option"
+                        ><i class="far fa-caret-right"></i>2019</span
+                      >
+                    </li>
+                    <li class="option-list">
+                      <span class="option"
+                        ><i class="far fa-caret-right"></i>2020</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-12 col-lg-6">
+                <div class="input-group input-light first-name">
+                  <h6 class="input-title">Security Code</h6>
+                  <input type="text" class="form-control" placeholder="CVC" />
+                </div>
+              </div>
+              <div class="col-md-12 col-lg-6">
+                <div class="input-group input-light first-name">
+                  <h6 class="input-title">Billing Zip</h6>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="xxxxxx"
+                  />
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="custom-control custom-switch">
+                  <input
+                    type="checkbox"
+                    class="custom-control-input"
+                    id="rememberme"
+                  />
+                  <label class="custom-control-label text-2" for="rememberme"
+                    >Save this card</label
+                  >
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div>
+          <h4 class="sub-title sub-title-1">Reason for visit</h4>
+          <span
+            >If this is an emergency, please call 911 or go to the nearest
+            emergency room.</span
+          >
+          <div class="input-group input-light mt-3">
+            <textarea
+              class="form-control text-area textarea-appoint"
+              placeholder="Describe briefly ...(e.g I'm having soar throat and cough)"
+            ></textarea>
+          </div>
+        </div>
+        <a
+          href="appointment-step4.html"
+          class="btn btn-secondary-color mt-2 mb-3"
+        >
+          <span>Book an Appointment</span>
+        </a>
+      </div>
+      <div class="col-lg-4 offset-lg-0 col-sm-8 offset-sm-2 col-10 offset-1">
+        <div class="image-box">
+          <figure>
+            <img
+              src="assets/images/doctors/doctor3-7.jpg"
+              class="w-100"
+              alt="Doctor"
+              width="370"
+              height="407"
+            />
+          </figure>
+          <div class="box-content">
+            <h4 class="box-title mb-0">Dr. George Brown</h4>
+            <div class="ratings-container mb-0">
+              <div class="ratings">
+                <div class="ratings-val" style="width: 100%"></div>
+              </div>
+              <span>4.8/5.0</span>
+            </div>
+            <span class="box-desc mb-0 ls-0">
+              You'll be seeing Dr. George tomorrow at 9:00 PM CDT
+            </span>
+          </div>
+          <div class="box-content box-content-clock mt-1">
+            <h3 class="box-title m-b-1"><i class="far fa-clock"></i> 5:36</h3>
+            <span class="box-desc mb-0 ls-0">
+              We're holding your appointment while you complete your booking.
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!------------------------------------------------
+		    content - end
+		    ------------------------------------------------>
+</main>
+<!------------------------------------------------
+		footer - start
+		------------------------------------------------>
+
+{% include 'footer.html' %}

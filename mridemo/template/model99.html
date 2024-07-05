@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
+    />
+
+    <title>Caremed - Model</title>
+
+    <meta
+      name="keywords"
+      content="Caremed HTML5 Responsive Template Medicine COVID-19 Corona Hospital"
+    />
+    <meta
+      name="description"
+      content="Caremed - Hospital HTML5 Responsive Template"
+    />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/static/assets/images/favicon.ico"
+    />
+
+    <!-- Plugins CSS File -->
+    <link rel="stylesheet" href="/static/assets/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="/static/assets/css/plugins/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/static/assets/css/plugins/datepicker.min.css"
+    />
+
+    <!-- Main CSS File -->
+    <link rel="stylesheet" href="/static/assets/css/style.min.css" />
+    <link rel="stylesheet" href="/static/assets/css/demo/demo-3.css" />
+    <link
+      rel="stylesheet"
+      href="/static/assets/vendor/fontawesome/css/all.min.css"
+    />
+    <style>
+      /* style.css */
+
+      body {
+        background-color: #f8f9fa;
+      }
+
+      #model-info {
+        text-align: center;
+        padding: 20px;
+        color: black;
+        margin: 50px 0px;
+      }
+
+      #image-preview-container {
+        border: 2px solid #283779;
+        padding: 10px;
+        margin-bottom: 20px;
+      }
+
+      #image-preview {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .output-messages {
+        margin-top: 20px;
+      }
+
+      .error-message {
+        color: red;
+      }
+
+      .result-message {
+        color: green;
+        font-weight: bold;
+      }
+
+      .loading-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.7);
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+      }
+
+      .spinner-border {
+        width: 3rem;
+        height: 3rem;
+        border-width: 0.25em;
+      }
+      .container .custom-file,
+      .container .custom-file * {
+        box-sizing: content-box;
+      }
+    </style>
+  </head>
+  <body>
+    <!------------------------------------------------
+	loading overlay - start
+	------------------------------------------------>
+    <div class="loading-overlay">
+      <div class="bounce-loader">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+      </div>
+    </div>
+    <!------------------------------------------------
+	loading overlay - end
+	------------------------------------------------>
+    <div class="page-wrapper">
+      <!------------------------------------------------
+		navigation - start
+		------------------------------------------------>
+      <header class="header">
+        <div class="header-top">
+          <div class="container-fluid">
+            <div class="header-left">
+              <ul class="top-menu top-link-menu">
+                <li>
+                  <a href="tel:#" class="link-phone"
+                    ><i class="fas fa-phone"></i>(800) 388 4455</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="link-email"
+                    ><i class="fas fa-envelope-open"></i>contact@medcare.com</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="header-right">
+              <ul class="top-menu">
+                <li>
+                  <a href="#" class="social-link"
+                    ><i class="fab fa-twitter"></i>Twitter</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="social-link"
+                    ><i class="fab fa-facebook"></i>Facebook</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="social-link"
+                    ><i class="fab fa-youtube"></i>Youtube</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="header-middle sticky-header">
+          <div class="header-left">
+            <a href="{% url 'home' %}" class="logo">
+              <h1 class="mb-0">
+                <img
+                  src="/static/assets/images/logo1.png"
+                  style="width: 120px; height: 110px"
+                  alt="Caremed Logo"
+                  width="185"
+                  height="48"
+                />
+              </h1>
+            </a>
+          </div>
+          <div class="header-right">
+            <button class="mobile-menu-toggler">
+              <span class="sr-only">Toggle mobile menu</span>
+              <i class="fal fa-bars"></i>
+            </button>
+            <nav class="main-nav ls-20">
+              <ul class="menu sf-arrows">
+                <li class="megamenu-container active">
+                  <a href="{% url 'home' %}" class="sf-with-ul"
+                    >Home<i class="fas fa-caret-down"></i
+                  ></a>
+
+                  <div class="megamenu demo">
+                    <div class="menu-col scrollable">
+                      <div class="demo-list">
+                        <div class="demo-item">
+                          <a href="#" class="disabled-link">
+                            <div
+                              class="demo-bg"
+                              style="
+                                background-image: url(/static/assets/images/menu/01_home.jpg);
+                              "
+                            >
+                              <div class="demo-link">
+                                <i class="fas fa-arrow-right"></i>
+                              </div>
+                            </div>
+                            <span class="demo-title"
+                              >Home 1 <span>(Standard1)</span></span
+                            >
+                          </a>
+                        </div>
+                        <!-- End .demo-item -->
+
+                        <div class="demo-item">
+                          <a href="#" class="disabled-link">
+                            <div
+                              class="demo-bg"
+                              style="
+                                background-image: url(/static/assets/images/menu/02_home.jpg);
+                              "
+                            >
+                              <div class="demo-link">
+                                <i class="fas fa-arrow-right"></i>
+                              </div>
+                            </div>
+                            <span class="demo-title"
+                              >Home 2 <span>(How it Works)</span></span
+                            >
+                          </a>
+                        </div>
+                        <!-- End .demo-item -->
+
+                        <div class="demo-item">
+                          <a href="#" class="disabled-link">
+                            <div
+                              class="demo-bg"
+                              style="
+                                background-image: url(/static/assets/images/menu/03_home.jpg);
+                              "
+                            >
+                              <div class="demo-link">
+                                <i class="fas fa-arrow-right"></i>
+                              </div>
+                            </div>
+                            <span class="demo-title"
+                              >Home 3<span>(Standard2)</span></span
+                            >
+                          </a>
+                        </div>
+                        <!-- End .demo-item -->
+
+                        <!--<div class="demo-item">
+                        <a href="index-4.html">
+                          <div
+                            class="demo-bg"
+                            style="
+                              background-image: url(assets/images/menu/04_home.jpg);
+                            "
+                          >
+                            <div class="demo-link">
+                              <i class="fas fa-arrow-right"></i>
+                            </div>
+                          </div>
+                          <span class="demo-title"
+                            >Home 4<span>(Appointment1)</span></span
+                          >
+                        </a>
+                      </div>-->
+                        <!-- End .demo-item -->
+
+                        <div class="demo-item">
+                          <a href="#" class="disabled-link">
+                            <div
+                              class="demo-bg"
+                              style="
+                                background-image: url(/static/assets/images/menu/05_home.jpg);
+                              "
+                            >
+                              <div class="demo-link">
+                                <i class="fas fa-arrow-right"></i>
+                              </div>
+                            </div>
+                            <span class="demo-title"
+                              >Home 4<span>(Appointment)</span></span
+                            >
+                          </a>
+                        </div>
+                        <!-- End .demo-item -->
+
+                        <div class="demo-item">
+                          <a href="#" class="disabled-link">
+                            <div
+                              class="demo-bg"
+                              style="
+                                background-image: url(/static/assets/images/menu/06_home.jpg);
+                              "
+                            >
+                              <div class="demo-link">
+                                <i class="fas fa-arrow-right"></i>
+                              </div>
+                            </div>
+                            <span class="demo-title"
+                              >Home 5<span>(Treatments)</span></span
+                            >
+                          </a>
+                        </div>
+                        <!-- End .demo-item -->
+
+                        <div class="demo-item">
+                          <a href="index-7.html">
+                            <div
+                              class="demo-bg"
+                              style="
+                                background-image: url(/static/assets/images/menu/07_home.jpg);
+                              "
+                            >
+                              <div class="demo-link">
+                                <i class="fas fa-arrow-right"></i>
+                              </div>
+                            </div>
+                            <span class="demo-title"
+                              >Home 6<span>(Dementia)</span></span
+                            >
+                          </a>
+                        </div>
+                        <!-- End .demo-item -->
+                        <div class="demo-item">
+                          <a href="login.html">
+                            <div
+                              class="demo-bg"
+                              style="
+                                background-image: url(/static/assets/images/menu/30_signin.jpg);
+                              "
+                            >
+                              <div class="demo-link">
+                                <i class="fas fa-arrow-right"></i>
+                              </div>
+                            </div>
+                            <span class="demo-title">Signin</span>
+                          </a>
+                        </div>
+                        <!-- End .demo-item -->
+                        <div class="demo-item">
+                          <a href="signup.html">
+                            <div
+                              class="demo-bg"
+                              style="
+                                background-image: url(/static/assets/images/menu/31_signup.jpg);
+                              "
+                            >
+                              <div class="demo-link">
+                                <i class="fas fa-arrow-right"></i>
+                              </div>
+                            </div>
+                            <span class="demo-title">Signup</span>
+                          </a>
+                        </div>
+                        <!-- End .demo-item -->
+                      </div>
+                      <!-- End .demo-list -->
+                    </div>
+                    <!-- End .menu-col -->
+                  </div>
+                  <!-- End .megamenu -->
+                </li>
+                <li>
+                  <a href="#" class="sf-with-ul"
+                    >Pages<i class="fas fa-caret-down"></i
+                  ></a>
+                  <ul class="sub-menu">
+                    <li>
+                      <a href="{% url 'about' %}"
+                        ><i class="fas fa-angle-right"></i>About us</a
+                      >
+                    </li>
+                    <li class="li-with-arrow">
+                      <a href="{% url 'doctor' %}"
+                        ><i class="fas fa-angle-right"></i>Our Doctors<i
+                          class="far fa-caret-right"
+                        ></i
+                      ></a>
+                      <ul>
+                        <li>
+                          <a href="{% url 'doctor' %}"
+                            ><i class="fas fa-angle-right"></i>Our Doctors</a
+                          >
+                        </li>
+                        <li>
+                          <a href="{% url 'doctordet' %}"
+                            ><i class="fas fa-angle-right"></i>Doctor
+                            (Detailed)</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <!--<li class="li-with-arrow">
+                    <a href="departments-1.html"
+                      ><i class="fas fa-angle-right"></i>Departments<i
+                        class="far fa-caret-right"
+                      ></i
+                    ></a>
+                    <ul>
+                      <li>
+                        <a href="departments-1.html"
+                          ><i class="fas fa-angle-right"></i>Departments Style
+                          1</a
+                        >
+                      </li>
+                      <li>
+                        <a href="departments-2.html"
+                          ><i class="fas fa-angle-right"></i>Departments Style
+                          2</a
+                        >
+                      </li>
+                      <li>
+                        <a href="departments-detailed.html"
+                          ><i class="fas fa-angle-right"></i>Department
+                          details</a
+                        >
+                      </li>
+                    </ul>
+                  </li>-->
+                    <li class="li-with-arrow">
+                      <a href="{% url 'blog' %}"
+                        ><i class="fas fa-angle-right"></i>Our Blog<i
+                          class="far fa-caret-right"
+                        ></i
+                      ></a>
+                      <ul>
+                        <li>
+                          <a href="{% url 'blog' %}"
+                            ><i class="fas fa-angle-right"></i>Blog Masonry</a
+                          >
+                        </li>
+
+                        <li>
+                          <a href="{% url 'blogdet' %}"
+                            ><i class="fas fa-angle-right"></i>Blog Detailed</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="li-with-arrow">
+                      <a href="{% url 'dep' %}"
+                        ><i class="fas fa-angle-right"></i>Departments<i
+                          class="far fa-caret-right"
+                        ></i
+                      ></a>
+                      <!--<ul>
+                      <li>
+                        <a href="appointment-step1.html"
+                          ><i class="fas fa-angle-right"></i>Appointment 1</a
+                        >
+                      </li>
+                      <li>
+                        <a href="appointment-step2.html"
+                          ><i class="fas fa-angle-right"></i>Appointment 2</a
+                        >
+                      </li>
+                    </ul>-->
+                    </li>
+                    <li class="li-with-arrow">
+                      <a href="{% url 'help' %}"
+                        ><i class="fas fa-angle-right"></i>Help</a
+                      >
+                      <ul>
+                        <li>
+                          <a href="{% url 'help' %}"
+                            ><i class="fas fa-angle-right"></i>Help</a
+                          >
+                        </li>
+                        <li>
+                          <a href="{% url 'helpdet' %}"
+                            ><i class="fas fa-angle-right"></i>Help Questions</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="{% url 'review' %}"
+                        ><i class="fas fa-angle-right"></i>Reviews</a
+                      >
+                    </li>
+                    <li>
+                      <a href="{% url 'contact' %}"
+                        ><i class="fas fa-angle-right"></i>Contact us</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="{% url 'working' %}">How it works</a>
+                </li>
+                <li>
+                  <a href="{% url 'treatment' %}">Treatments</a>
+                </li>
+                <li>
+                  <a href="{% url 'membership' %}">Membership</a>
+                </li>
+                <li>
+                  <a href="{% url 'help' %}">Help</a>
+                </li>
+              </ul>
+              <!-- End .menu -->
+            </nav>
+            <!-- End .main-nav -->
+            <div class="header-search">
+              <a href="#" class="search-toggle" role="button"
+                ><i class="fas fa-search"></i
+              ></a>
+              <form action="#" class="header-search-wrapper">
+                <label for="q" class="sr-only">Search</label>
+                <input
+                  type="search"
+                  class="form-control"
+                  name="q"
+                  id="q"
+                  placeholder="Search in..."
+                  required=""
+                />
+                <button type="submit" class="btn-search">
+                  <i class="fas fa-search"></i>
+                </button>
+              </form>
+            </div>
+            <a
+              href="appointment-step1.html"
+              class="btn btn-sm btn-primary-color ls-0"
+            >
+              <span>Book an Appointment</span>
+            </a>
+            <a href="appointment-step1.html" class="icon-alt"
+              ><i class="fal fa-notes-medical"></i
+            ></a>
+            <a
+              href="login.html"
+              class="btn btn-sm btn-secondary-color ls-0 btn-login"
+            >
+              <span>Sign in</span>
+            </a>
+            <a href="login.html" class="icon-alt"
+              ><i class="fas fa-user"></i
+            ></a>
+          </div>
+        </div>
+      </header>
+      <!------------------------------------------------
+		navigation - end
+		------------------------------------------------>
+      <main class="main">
+        <!------------------------------------------------
+		    page header - start
+		    ------------------------------------------------>
+        <div
+          class="intro-slider intro-slider-1 owl-carousel owl-theme owl-nav-inside owl-light slide-animate mb-0"
+          data-toggle="owl"
+          data-owl-options='{
+                    "dots": false,
+                    "nav": false, 
+                    "responsive": {
+                        "1200": {
+                            "nav": true
+                        }
+                    }
+                }'
+        >
+          <!-- 
+                        background image is added through css and can be modified in the _sections.scss file
+                        the image is added to the .bg-section-1 class.
+                    -->
+          <div class="banner intro-slide bg-section bg-section-13">
+            <div class="container">
+              <div class="banner-content">
+                <h3 class="banner-title">
+                  Dementia Diagnosis Model
+                </h3>
+                <p class="banner-info">
+                  Our advanced dementia diagnosis model utilizes machine learning algorithms and medical data analysis to provide accurate assessments of cognitive decline. By analyzing a range of biomarkers and cognitive assessments, our model aids in early detection and personalized treatment plans, empowering individuals and caregivers with timely interventions and support.
+                </p>
+              </div>
+              <div class="foreground-img">
+                <img
+                  src="/static/assets/images/demos/demo-7/slide/slide-1-fore.png"
+                  alt="Banner-slide"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- background image is added through css and can be modified in the _sections.scss file the image is added to the .bg-section-14 class.-->
+          <!--<div class="banner intro-slide bg-section bg-section-14">
+            <div class="container">
+              <div class="banner-content">
+                <h1 class="banner-title">Doctors who treat with care.</h1>
+                <p class="banner-info">
+                  Our skilled doctors have tremendous experience with wide range
+                  of diseases to serve the needs of our patients.
+                </p>
+                <div class="banner-actions">
+                  <a href="Redirect.html" class="btn btn-secondary-color">
+                    <span>Book an Appointment</span>
+                  </a>
+                  <a href="how-it-works.html" class="btn">
+                    <span>Learn More</span>
+                  </a>
+                </div>
+              </div>
+              <div class="foreground-img">
+                <img
+                  src="/static/assets/images/demos/demo-7/slide/slide-2-fore.png"
+                  alt="Banner-slide"
+                />
+              </div>
+            </div>
+          </div>
+        </div>-->
+      </main>
+      <div id="model-info" class="col-md-8 col-10 mx-auto">
+        <h1 style="font-size: 50px; color: #283779;">Our Model</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </div>
+      <div class="parent" style="margin-bottom: 100px">
+        <!--I Have Changed the width by using col property-->
+        <div
+          class="container mt-4 mb-4 col-md-6 col-10"
+          style="max-width: 900px"
+        >
+          <div id="image-preview-container">
+            <label for="imageInput">Choose an image:</label>
+            <div class="input-group">
+              <div class="custom-file" style="margin-bottom: 20px">
+                <input
+                  type="file"
+                  class="custom-file-input"
+                  id="imageInput"
+                  accept="image/*"
+                  onchange="displayFileName(this)"
+                  style="margin-top: -1px; margin-left: -4px"
+                />
+                <label class="custom-file-label" for="imageInput"
+                  >Select file</label
+                >
+              </div>
+            </div>
+
+            <div id="image-preview">
+              <!-- Image preview will be displayed here -->
+            </div>
+          </div>
+
+          <div class="output-messages">
+            <input
+              type="button"
+              value="Check Result"
+              style="
+                background-color: #283779;
+                color: white;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+              "
+              onclick="checkResult()"
+            />
+            <!--<button type="button" class="btn btn-danger">Danger</button>
+            <button type="button" class="btn btn-red" onclick="checkResult()">
+              Check Result
+            </button>!-->
+            <div id="errorMessage" class="error-message mt-3"></div>
+            <div id="resultMessage" class="result-message mt-3"></div>
+            <div id="loadingOverlay" class="loading-overlay">
+              <div class="spinner-border text-primary" role="status">
+                <span class="sr-only">Loading...</span>
+              </div>
+            </div>
+            <textarea
+              style="color: green; font-size: 20px; font-weight: 600"
+              id="resultTextArea"
+              class="form-control mt-3"
+              rows="5"
+              readonly
+            ></textarea>
+          </div>
+        </div>
+      </div>
+      <!------------------------------------------------
+		    page header - end
+		    ------------------------------------------------>
+      <!------------------------------------------------
+		    about content - start
+		    ------------------------------------------------>
+
+      <!------------------------------------------------
+		footer - start
+		------------------------------------------------>
+      <footer class="footer bg-primary-color">
+        <div class="container">
+          <div class="footer-top">
+            <div class="row d-flex align-items-center justify-content-center">
+              <div class="col-lg-6 col-sm-7 col-10"></div>
+              <div
+                class="col-lg-6 col-sm-7 col-10 d-lg-flex justify-content-lg-end"
+              >
+                <div class="social-links">
+                  <a href="#" class="social-link"
+                    ><i class="fab fa-twitter"></i><span>Twitter</span></a
+                  >
+                  <a href="#" class="social-link"
+                    ><i class="fab fa-facebook"></i><span>Facebook</span></a
+                  >
+                  <a href="#" class="social-link"
+                    ><i class="fab fa-youtube"></i><span>Youtube</span></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer-middle">
+            <div class="container">
+              <div class="row d-flex justify-content-center">
+                <div class="col-lg-3 col-sm-7 col-10">
+                  <div class="info-box">
+                    <h6 class="info-title">Company</h6>
+                    <ul class="info-list">
+                      <li><a href="#" class="info-link">About</a></li>
+                      <li><a href="#" class="info-link">Our Doctors</a></li>
+                      <li><a href="#" class="info-link">Latest Blog</a></li>
+                      <li><a href="#" class="info-link">Careers</a></li>
+                      <li><a href="#" class="info-link">Contact</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-sm-7 col-10">
+                  <div class="info-box">
+                    <h6 class="info-title">Support</h6>
+                    <ul class="info-list">
+                      <li><a href="#" class="info-link">Reviews</a></li>
+                      <li><a href="#" class="info-link">FAQs</a></li>
+                      <li><a href="#" class="info-link">Help Center</a></li>
+                      <li><a href="#" class="info-link">Doctors</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-sm-7 col-10">
+                  <div class="info-box">
+                    <h6 class="info-title">Legal</h6>
+                    <ul class="info-list">
+                      <li><a href="#" class="info-link">Term of use</a></li>
+                      <li><a href="#" class="info-link">Code of Conduct</a></li>
+                      <li><a href="#" class="info-link">Privacy Policy</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-sm-7 col-10">
+                  <div class="info-box">
+                    <h6 class="info-title">Company</h6>
+                    <form class="input-group input-footer">
+                      <input
+                        type="email"
+                        class="form-control"
+                        placeholder="Email address"
+                        required
+                      />
+                      <button type="submit" class="form-action">
+                        <i class="fas fa-check-circle"></i>
+                      </button>
+                    </form>
+                    <p>Unsubscribe anytime.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <div class="row d-flex justify-content-center">
+              <div class="col-lg-12 col-sm-7 col-10">
+                <p>© GFXPARTNER</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!------------------------------------------------
+		footer - end
+		------------------------------------------------>
+    </div>
+
+    <button id="scroll-top" title="Back to Top">
+      <i class="fal fa-angle-up"></i>
+    </button>
+
+    <div class="mobile-menu-overlay"></div>
+
+    <div class="mobile-menu-container mobile-menu-light">
+      <div class="mobile-menu-wrapper">
+        <span class="mobile-menu-close"><i class="fal fa-times"></i></span>
+
+        <form action="#">
+          <div class="input-group input-light input-search mt-2">
+            <input
+              type="text"
+              class="form-control search-control border-none mr-1 ml-1"
+              placeholder="search"
+            />
+            <button type="submit" class="btn-search">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </form>
+
+        <nav class="mobile-nav mt-5">
+          <ul class="mobile-menu">
+            <li>
+              <a href="#" class="sf-with-ul">Home Pages</a>
+
+              <ul>
+                <li><a href="index.html">Home 1</a></li>
+                <li><a href="index-2.html">Home 2</a></li>
+                <li><a href="index-3.html">Home 3</a></li>
+                <li><a href="index-4.html">Home 4</a></li>
+                <li><a href="index-5.html">Home 5</a></li>
+                <li><a href="index-6.html">Home 6</a></li>
+                <li><a href="index-7.html">Home 7</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class="sf-with-ul">Standard Pages</a>
+              <ul>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="doctors.html">Our Doctors</a></li>
+                <li><a href="doctors-detailed.html">Doctor (Detailed)</a></li>
+                <li><a href="departments-1.html">Departments (Style 01)</a></li>
+                <li><a href="departments-2.html">Departments (Style 02)</a></li>
+                <li>
+                  <a href="departments-detailed.html">Departments (Detailed)</a>
+                </li>
+                <li><a href="treatments.html">Treatments</a></li>
+                <li><a href="how-it-works.html">How it Works</a></li>
+                <li><a href="help.html">Help</a></li>
+                <li><a href="help-questions.html">Help Questions</a></li>
+                <li><a href="membership.html">Membership</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="contact-us.html">Contact</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class="sf-with-ul">Blog Pages</a>
+              <ul>
+                <li><a href="blog-masonry.html">Blog Masonry</a></li>
+                <li>
+                  <a href="blog-right-sidebar.html"
+                    >Blog Masonry (Right Sidebar)</a
+                  >
+                </li>
+                <li>
+                  <a href="blog-left-sidebar.html"
+                    >Blog Masonry (Left Sidebar)</a
+                  >
+                </li>
+                <li><a href="blog-detailed.html">Blog Detailed</a></li>
+                <li>
+                  <a href="blog-detailed-sidebar.html">Blog Detailed Sidebar</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class="sf-with-ul">Appointments</a>
+              <ul>
+                <li>
+                  <a href="appointment-step1.html">Appointment (Step01)</a>
+                </li>
+                <li>
+                  <a href="appointment-step2.html">Appointment (Step02)</a>
+                </li>
+                <li>
+                  <a href="appointment-step3.html">Appointment (Step03)</a>
+                </li>
+                <li>
+                  <a href="appointment-step4.html">Appointment (Step04)</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class="sf-with-ul">Login Pages</a>
+              <ul>
+                <li><a href="login.html">Signin</a></li>
+                <li><a href="signup.html">Signup</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <!-- End .mobile-nav -->
+
+        <div class="social-icons mt-6">
+          <a href="#" class="social-icon" target="_blank" title="Twitter"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <a href="#" class="social-icon" target="_blank" title="Facebook"
+            ><i class="fab fa-facebook"></i
+          ></a>
+          <a href="#" class="social-icon" target="_blank" title="Youtube"
+            ><i class="fab fa-youtube"></i
+          ></a>
+        </div>
+        <!-- End .social-icons -->
+
+        <div class="mobile-actions">
+          <a
+            href="appointment-step1.html"
+            class="btn btn-secondary-color btn-xs"
+            >Book Appointment</a
+          >
+          <a href="login.html" class="btn btn-xs">Signin</a>
+        </div>
+        <!-- End .mobile-actions -->
+      </div>
+      <!-- End .mobile-menu-wrapper -->
+    </div>
+    <!-- End .mobile-menu-container -->
+
+    <!-- Plugins JS File -->
+    <script>
+      function displayFileName(input) {
+        var fileName = input.files[0].name;
+        document.querySelector(".custom-file-label").textContent = fileName;
+
+        var preview = document.getElementById("image-preview");
+        var file = input.files[0];
+        var reader = new FileReader();
+
+        reader.onload = function () {
+          preview.innerHTML =
+            '<img src="' +
+            reader.result +
+            '" class="img-fluid" alt="Image Preview">';
+        };
+
+        if (file) {
+          reader.readAsDataURL(file);
+        } else {
+          preview.innerHTML = "";
+        }
+      }
+
+      function checkResult() {
+        var fileName = document.querySelector(".custom-file-label").textContent;
+        var errorMessage = document.getElementById("errorMessage");
+        var resultMessage = document.getElementById("resultMessage");
+        var resultTextArea = document.getElementById("resultTextArea");
+        var loadingOverlay = document.getElementById("loadingOverlay");
+
+        if (!fileName || fileName === "Select file") {
+          errorMessage.textContent = "Please select a picture first.";
+          resultMessage.textContent = "";
+          resultTextArea.value = "";
+          return;
+        }
+
+        errorMessage.textContent = ""; // Clear error message
+        resultMessage.textContent = ""; // Clear result message
+
+        loadingOverlay.style.display = "flex"; // Show loading overlay
+
+        // Simulate delay with setTimeout (replace with actual processing logic)
+        setTimeout(() => {
+          // Randomly generate a result
+          let randomNum = Math.random();
+          let result;
+
+          if (randomNum < 0.33) {
+            result = "You have chances of AD. Please connect with a doctor.";
+          } else if (randomNum < 0.66) {
+            result = "Normal";
+          } else {
+            result = "MCI";
+          }
+
+          resultTextArea.value = result;
+          loadingOverlay.style.display = "none"; // Hide loading overlay
+        }, 3000); // Simulated delay of 3 seconds
+      }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/static/assets/js/jquery.min.js"></script>
+    <script src="/static/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/assets/js/jquery.waypoints.min.js"></script>
+    <script src="/static/assets/js/plugins/owl.carousel.min.js"></script>
+    <script src="/static/assets/js/plugins/datepicker.min.js"></script>
+    <script src="/static/assets/js/plugins/imagesloaded.pkgd.min.js"></script>
+    <script src="/static/assets/js/plugins/isotope.pkgd.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="/static/assets/js/main.min.js"></script>
+  </body>
+</html>

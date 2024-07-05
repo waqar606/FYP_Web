@@ -1,0 +1,660 @@
+{% include "header.html" %}
+<!------------------------------------------------
+		navigation - end
+		------------------------------------------------>
+<main class="main">
+  <!------------------------------------------------
+			hero slider - start
+			------------------------------------------------>
+  <div
+    class="intro-slider intro-slider-1 owl-carousel owl-theme owl-nav-inside owl-light slide-animate mb-0"
+    data-toggle="owl"
+    data-owl-options='{
+                "dots": false,
+                "nav": false, 
+                "responsive": {
+                    "1200": {
+                        "nav": true
+                    }
+                }
+            }'
+  >
+    <!--background image is added through css and can be modified in the _sections.scss file the image is added to the .bg-section-1 class.-->
+    <div class="banner intro-slide bg-section bg-section-13">
+      <div class="container">
+        <div class="banner-content">
+          <h3 class="banner-title">Empowering Minds, Transforming Lives</h3>
+          <p class="banner-info">
+            Welcome to Mindsift, where cutting-edge technology meets
+            compassionate care. Our mission is to revolutionize
+            neurodegenerative disease management through early detection and
+            comprehensive support. From Alzheimer's detection to personalized
+            patient care, join us in redefining the future of cognitive
+            well-being.
+          </p>
+          <div class="banner-actions">
+            <a
+              href="{% url 'predict_result' %}"
+              class="btn btn-secondary-color"
+            >
+              <span>Detect Now</span>
+            </a>
+            <a href="how-it-works.html" class="btn">
+              <span>Learn More</span>
+            </a>
+          </div>
+        </div>
+        <div class="foreground-img">
+          <img
+            src="/static/assets/images/demos/demo-7/slide/slide-1-fore.png"
+            alt="Banner-slide"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- background image is added through css and can be modified in the _sections.scss file the image is added to the .bg-section-14 class.-->
+  </div>
+  <!------------------------------------------------
+            hero slider - end
+            ------------------------------------------------>
+  <!------------------------------------------------
+		    image text section - start
+		    ------------------------------------------------>
+  <div class="container step-section">
+    <div class="row d-flex justify-content-center">
+      <div class="col-lg-12 col-md-8 col-sm-8 col-10">
+        <h2 class="ls-n-20 text-center section-heading">About Alzheimer's</h2>
+      </div>
+    </div>
+    <div class="row d-flex justify-content-center">
+      <div
+        class="banner-aside align-items-lg-start col-lg-12 col-md-8 col-sm-8 col-10"
+      >
+        <div class="container col-md-6">
+          <figure class="mr-xl-10 mr-lg-5 mr-0">
+            <img
+              src="/static/assets/images/pics/At the office-cuate (1).png"
+              class="img-aside"
+              alt="Banner-aside"
+              width="270"
+              height="247"
+            />
+            <!--<img
+            src="/static/assets/images/demos/demo-7/puzzle/puzzle-1.png"
+            class="puzzle"
+            alt="Puzzle"
+            width="160"
+            height="217"
+          />-->
+          </figure>
+        </div>
+        <div class="banner-content">
+          <h3 class="banner-title">
+            Alzheimer's is a disease that affects memory, thinking, and
+            behavior.
+          </h3>
+          <p class="banner-desc">
+            Alzheimer's disease is a progressive neurological disorder that
+            affects memory, thinking skills, and ultimately, the ability to
+            carry out simple tasks. It is the most common cause of dementia
+            among older adults, but it can also affect individuals in their
+            midlife. Alzheimer's progressively worsens over time, and currently,
+            there is no cure. However, with proper understanding and care,
+            individuals with Alzheimer's can live meaningful lives.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!------------------------------------------------
+		    image text section - end
+		    ------------------------------------------------>
+  <!------------------------------------------------
+		    icon box slider - start
+		    ------------------------------------------------>
+  <div
+    class="banner-big bg-image image-box-slider"
+    style="
+      background-image: url('/static/assets/images/demos/demo-7/banner/banner-big-1.jpg');
+    "
+  >
+    <div class="container position-relative">
+      <div class="row">
+        <div
+          class="col-lg-12 offset-lg-0 col-md-8 offset-md-2 col-sm-8 offset-sm-2 col-10 offset-1"
+        >
+          <div class="banner-content">
+            <h2 class="banner-title">What are the symptoms of Dementia.</h2>
+            <p class="banner-info">
+              We provide primary care when you need it, get personalized and
+              high quality healthcare by talking to top medical doctors.
+            </p>
+            <div
+              class="owl-carousel owl-theme owl-nav-inside owl-imageover-6 owl-light mb-3"
+              data-toggle="owl"
+              data-owl-options='{
+                                    "margin": 30,
+                                    "dots": false,
+                                    "nav": false,
+                                    "loop": false,
+                                    "responsive": {
+                                        "576": {
+                                            "items": 1
+                                        },
+                                        "768": {
+                                            "items": 2
+                                        },
+                                        "992": {
+                                            "items": 3
+                                        },
+                                        "1200": {
+                                            "items": 4,
+                                            "nav": true
+                                        }
+                                    }
+                                }'
+            >
+              <div class="icon-box covid-symptom text-center" 
+            >
+                <figure >
+                  <img style="padding-left: 50px;"
+                    src="/static/assets/images/pics/w9.png"
+                    alt="Covid-Symptom"
+                    width="186"
+                    height="235"
+                    
+                    
+                  />
+                 
+                </figure>
+                <div class="icon-box-content">
+                  <h5 class="box-title">Memory Loss</h5>
+                </div>
+              </div>
+              <div class="icon-box covid-symptom text-center">
+                <figure>
+                  <img
+                    src="/static/assets/images/pics/w10.png"
+                    alt="Covid-Symptom"
+                    width="186"
+                    height="235"
+                  />
+                </figure>
+                <div class="icon-box-content">
+                  <h5 class="box-title">Communication Issues</h5>
+                </div>
+              </div>
+              <div class="icon-box covid-symptom text-center">
+                <figure>
+                  <img
+                    src="/static/assets/images/pics/w-13.png"
+                    alt="Covid-Symptom"
+                    width="157"
+                    height="234"
+                  />
+                </figure>
+                <div class="icon-box-content">
+                  <h5 class="box-title">Misplacing <br />Misplacing Items</h5>
+                </div>
+              </div>
+              <div class="icon-box covid-symptom text-center">
+                <figure>
+                  <img style="padding-left: 55px;"
+                    src="/static/assets/images/pics/w-7.png"
+                    alt="Covid-Symptom"
+                    width="200"
+                    height="229"
+                  />
+                </figure>
+                <div class="icon-box-content">
+                  <h5 class="box-title">Confusion</h5>
+                </div>
+              </div>
+              <!-- <div class="icon-box covid-symptom text-center">
+                <figure>
+                  <img
+                    src="/static/assets/images/demos/demo-7/symptoms/symptom-1.png"
+                    alt="Covid-Symptom"
+                    width="183"
+                    height="212"
+                  />
+                </figure>
+                <div class="icon-box-content">
+                  <h5 class="box-title">Misplacing Items</h5>
+                </div> -->
+              </div>
+            </div>
+            <!-- <div class="banner-actions">
+              <a href="Redirect.html" class="btn btn-primary-color">
+                <span>Book an Appointment</span>
+              </a>
+              <a href="how-it-works.html" class="btn">
+                <span>Learn More</span>
+              </a>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!------------------------------------------------
+		    icon box slider - end
+		    ------------------------------------------------>
+  <!------------------------------------------------
+		    step section - start
+		    ------------------------------------------------>
+  <div class="container step-section">
+    <div class="row d-flex justify-content-center">
+      <div class="col-lg-12 col-md-8 col-sm-8 col-10">
+        <h2 class="ls-n-20 text-center section-heading">
+          Reasons For Dementia
+        </h2>
+      </div>
+    </div>
+    <div class="row d-flex justify-content-center">
+      <div
+        class="banner-aside align-items-lg-start d-md-flex col-lg-12 col-md-8 col-sm-8 col-10"
+      >
+        <figure class="mr-xl-10 mr-lg-5 mr-md-3">
+          <img
+            src="/static/assets/images/pics/w2.jpg"
+            class="img-aside"
+            alt="Banner-aside"
+            width="470"
+            height="447"
+          />
+          <img
+            src="/static/assets/images/demos/demo-7/puzzle/puzzle-2.png"
+            class="puzzle"
+            alt="Puzzle"
+            width="160"
+            height="217"
+          />
+        </figure>
+        <div class="banner-content">
+          <p class="banner-subtitle">Reason 1</p>
+          <h3 class="banner-title">Genetic Factors</h3>
+          <p class="banner-desc">
+            Certain genetic mutations and variations can predispose individuals
+            to Alzheimer's, although it's not the sole determinant, familial
+            history plays a crucial role.
+          </p>
+          <!-- <div class="banner-actions">
+            <a href="Redirect.html" class="btn btn-secondary-color">
+              <span>Book an Appointment</span>
+            </a>
+          </div> -->
+        </div>
+      </div>
+      <div
+        class="banner-aside banner-aside-switch align-items-lg-start d-md-flex img-right col-lg-12 col-md-8 col-sm-8 col-10"
+      >
+        <figure>
+          <img
+            src="/static/assets/images/pics/w1.jpg"
+            class="img-aside"
+            alt="Banner-aside"
+            width="470"
+            height="447"
+          />
+          
+        </figure>
+        <div class="banner-content">
+          <p class="banner-subtitle">Reason 2</p>
+          <h3 class="banner-title">Age</h3>
+          <p class="banner-desc">
+            As individuals grow older, the risk of developing Alzheimer's
+            disease increases significantly, with most cases occurring after the
+            age of 65.
+          </p>
+          <!-- <div class="banner-actions">
+            <a href="Redirect.html" class="btn btn-secondary-color">
+              <span>Book an Appointment</span>
+            </a>
+          </div> -->
+        </div>
+      </div>
+      <div
+        class="banner-aside align-items-lg-start d-md-flex col-lg-12 col-md-8 col-sm-8 col-10"
+      >
+        <figure class="mr-xl-10 mr-lg-5 mr-md-3">
+          <img
+            src="/static/assets/images/pics/w3.jpg"
+            class="img-aside"
+            alt="Banner-aside"
+            width="470"
+            height="447"
+          />
+          
+        </figure>
+        <div class="banner-content">
+          <p class="banner-subtitle">Reason 3</p>
+          <h3 class="banner-title">Head Trauma</h3>
+          <p class="banner-desc">
+            A history of severe head injuries, particularly those resulting in
+            loss of consciousness, has been associated with an increased risk of
+            developing Alzheimer's disease later in life.
+          </p>
+          <!-- <div class="banner-actions">
+            <a href="Redirect.html" class="btn btn-secondary-color">
+              <span>Book an Appointment</span>
+            </a>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!------------------------------------------------
+		    step section - end
+		    ------------------------------------------------>
+  <!------------------------------------------------
+		    type section - start
+		    ------------------------------------------------>
+  <!-- 
+				background image is added through css and can be modified in the _sections.scss file
+				the image is added to the .bg-section-16 class.
+			-->
+  <!--<div class="bg-section bg-section-16 type-section type-section-2">
+          <div class="container-wrapper">
+            <div class="container">
+              <div class="banner-content">
+                <div class="row">
+                  <div
+                    class="col-lg-12 offset-lg-0 col-md-8 col-sm-8 offset-sm-2 col-10 offset-1"
+                  >
+                    <div class="banner-content-wrapper">
+                      <h2 class="banner-title">
+                        How to protect yourself from corona virus.
+                      </h2>
+                      <p class="banner-info">
+                        We provide primary care when you need it, get
+                        personalized and high quality healthcare by talking to
+                        top medical doctors.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div
+                    class="col-lg-4 offset-lg-0 col-md-8 col-sm-8 offset-sm-2 col-10 offset-1"
+                  >
+                    <div class="icon-box icon-box-left mb-3">
+                      <figure>
+                        <i class="fal fa-house-user"></i>
+                      </figure>
+                      <div class="icon-box-content">
+                        <h4 class="box-title">
+                          Don’t go out <br />
+                          unnecessarily
+                        </h4>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="col-lg-4 offset-lg-0 col-md-8 col-sm-8 offset-sm-2 col-10 offset-1"
+                  >
+                    <div class="icon-box icon-box-left mb-3">
+                      <figure>
+                        <i class="fal fa-hands-wash"></i>
+                      </figure>
+                      <div class="icon-box-content">
+                        <h4 class="box-title">
+                          Wash your hands <br />
+                          every few hours
+                        </h4>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="col-lg-4 offset-lg-0 col-md-8 col-sm-8 offset-sm-2 col-10 offset-1"
+                  >
+                    <div class="icon-box icon-box-left mb-3">
+                      <figure>
+                        <i class="fal fa-stethoscope"></i>
+                      </figure>
+                      <div class="icon-box-content">
+                        <h4 class="box-title">
+                          Call a doctor <br />
+                          if feeling sick
+                        </h4>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="col-lg-4 offset-lg-0 col-md-8 col-sm-8 offset-sm-2 col-10 offset-1"
+                  >
+                    <div class="icon-box icon-box-left mb-3">
+                      <figure>
+                        <i class="fal fa-head-side-mask"></i>
+                      </figure>
+                      <div class="icon-box-content">
+                        <h4 class="box-title">
+                          Wear a mask <br />
+                          when going out
+                        </h4>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="col-lg-4 offset-lg-0 col-md-8 col-sm-8 offset-sm-2 col-10 offset-1"
+                  >
+                    <div class="icon-box icon-box-left mb-3">
+                      <figure>
+                        <i class="fal fa-handshake-alt-slash"></i>
+                      </figure>
+                      <div class="icon-box-content">
+                        <h4 class="box-title">
+                          Keep a safe <br />
+                          distance
+                        </h4>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="col-lg-4 offset-lg-0 col-md-8 col-sm-8 offset-sm-2 col-10 offset-1"
+                  >
+                    <div class="icon-box icon-box-left mb-3">
+                      <figure>
+                        <i class="fal fa-faucet-drip"></i>
+                      </figure>
+                      <div class="icon-box-content">
+                        <h4 class="box-title">
+                          Frequently drink <br />
+                          fresh water
+                        </h4>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div
+                    class="col-lg-12 offset-lg-0 col-md-8 col-sm-8 offset-sm-2 col-10 offset-1"
+                  >
+                    <div class="banner-actions">
+                      <a
+                        href="appointment-step1.html"
+                        class="btn btn-primary-color"
+                      >
+                        <span>Book an Appointment</span>
+                      </a>
+                      <a href="how-it-works.html" class="btn">
+                        <span>Learn More</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="foreground-img">
+            <img
+              src="assets/images/demos/demo-7/banner/banner-big-2-fore.png"
+              alt="image"
+            />
+          </div>
+        </div>-->
+  <!------------------------------------------------
+		    type section - end
+		    ------------------------------------------------>
+  <!------------------------------------------------
+		    FAQ section - start
+		    ------------------------------------------------>
+  <!--<div class="bg-more-light faq-section padding-small">
+          <div class="container">
+            <h2 class="ls-n-20 text-center">FAQs</h2>
+            <div class="row">
+              <div
+                class="col-lg-8 offset-lg-2 col-sm-8 offset-sm-2 col-10 offset-1"
+              >
+                <div class="accordion accordion-icon" id="accordion-10">
+                  <div class="field">
+                    <div class="field-header" id="heading10-1">
+                      <h4 class="field-title">
+                        <a
+                          class="accordion-link collapsed"
+                          role="button"
+                          data-toggle="collapse"
+                          href="#collapse10-1"
+                          aria-expanded="false"
+                          aria-controls="collapse10-1"
+                        >
+                          COVID-19 Serology/Antibody Testing
+                        </a>
+                      </h4>
+                    </div>
+                    <div
+                      id="collapse10-1"
+                      class="collapse"
+                      aria-labelledby="heading10-1"
+                      data-parent="#accordion-10"
+                    >
+                      <div class="field-body">
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetuer adipiscing
+                          elit. Donec odio. Quisque volutpat mattis eros. Nullam
+                          malesuada erat ut turpis. Suspendisse urna nibh,
+                          viverra non, semper suscipit, posuere a, pede. Donec
+                          nec justo eget felis facilisis fermentum.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="field active">
+                    <div class="field-header" id="heading10-2">
+                      <h4 class="field-title">
+                        <a
+                          class="accordion-link"
+                          role="button"
+                          data-toggle="collapse"
+                          href="#collapse10-2"
+                          aria-expanded="true"
+                          aria-controls="collapse10-2"
+                        >
+                          What is CareMed's policy on controlled substances?
+                        </a>
+                      </h4>
+                    </div>
+                    <div
+                      id="collapse10-2"
+                      class="collapse show"
+                      aria-labelledby="heading10-2"
+                      data-parent="#accordion-10"
+                    >
+                      <div class="field-body">
+                        <p>
+                          Yes, during your visit the doctor will discuss if
+                          taking time off from work or school is part of your
+                          treatment plan.
+                        </p>
+                        <p>
+                          If you need an excuse note, you may request one from
+                          the doctor during your visit. You’ll receive an alert
+                          when your excuse note is ready in your account, from
+                          there you can download to print or email.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="field">
+                    <div class="field-header" id="heading10-3">
+                      <h4 class="field-title">
+                        <a
+                          class="accordion-link collapsed"
+                          role="button"
+                          data-toggle="collapse"
+                          href="#collapse10-3"
+                          aria-expanded="false"
+                          aria-controls="collapse10-3"
+                        >
+                          Can CareMed help with the Coronavirus?
+                        </a>
+                      </h4>
+                    </div>
+                    <div
+                      id="collapse10-3"
+                      class="collapse"
+                      aria-labelledby="heading10-3"
+                      data-parent="#accordion-10"
+                    >
+                      <div class="field-body">
+                        <p>
+                          Nullam malesuada erat ut turpis. Suspendisse urna
+                          nibh, viverra non, semper suscipit, posuere a, pede.
+                          Donec nec justo eget felis facilisis fermentum.Lorem
+                          ipsum dolor sit amet, consectetuer adipiscing elit.
+                          Donec odio. Quisque volutpat mattis eros. Lorem ipsum
+                          dolor sit amet, consectetuer adipiscing elit. Donec
+                          odio. Quisque volutpat mattis eros.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="field">
+                    <div class="field-header" id="heading10-4">
+                      <h4 class="field-title">
+                        <a
+                          class="accordion-link collapsed"
+                          role="button"
+                          data-toggle="collapse"
+                          href="#collapse10-4"
+                          aria-expanded="false"
+                          aria-controls="collapse10-4"
+                        >
+                          Can CareMed Fill My Prescription?
+                        </a>
+                      </h4>
+                    </div>
+                    <div
+                      id="collapse10-4"
+                      class="collapse"
+                      aria-labelledby="heading10-4"
+                      data-parent="#accordion-10"
+                    >
+                      <div class="field-body">
+                        <p>
+                          Nullam malesuada erat ut turpis. Suspendisse urna
+                          nibh, viverra non, semper suscipit, posuere a, pede.
+                          Donec nec justo eget felis facilisis fermentum.Lorem
+                          ipsum dolor sit amet, consectetuer adipiscing elit.
+                          Donec odio. Quisque volutpat mattis eros. Lorem ipsum
+                          dolor sit amet, consectetuer adipiscing elit. Donec
+                          odio. Quisque volutpat mattis eros.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>-->
+  <!------------------------------------------------
+		    FAQ section - end
+		    ------------------------------------------------>
+</main>
+<!------------------------------------------------
+		footer - start
+		------------------------------------------------>
+{% include 'footer.html' %}

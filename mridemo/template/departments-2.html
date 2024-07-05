@@ -1,0 +1,245 @@
+{% include 'header.html' %}
+<!------------------------------------------------
+		navigation - end
+		------------------------------------------------>
+<main class="main">
+  <!------------------------------------------------
+		    page header - start
+		    ------------------------------------------------>
+  <div class="page-header bg-more-light">
+    <div class="container">
+      <h2 class="page-title">Departments</h2>
+      <nav aria-label="breadcrumb" class="breadcrumb-nav">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active">
+            <a href="index.html">Pages</a>
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">
+            Departments
+          </li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+  <!------------------------------------------------
+		    page header - end
+		    ------------------------------------------------>
+  <div class="container department-list-section">
+    <div class="row">
+      <div class="col-10 offset-1 col-sm-8 offset-sm-2 col-lg-12 offset-lg-0">
+        <h2 class="ls-n-20 text-center section-heading">
+          Check all the areas in which we can help you.
+        </h2>
+      </div>
+    </div>
+    <div class="row">
+      <!-- <div
+        class="col-10 offset-1 col-sm-8 offset-sm-2 col-lg-4 offset-lg-0 mt-3"
+      >
+        <div class="card hover-icon">
+          <div class="card-heading">
+            <a href="departments-detailed.html">
+              <figure>
+                <i class="fal fa-scalpel-path"></i>
+              </figure>
+            </a>
+            <a href="departments-detailed.html">
+              <h4 class="card-title">Memory<br />Care</h4>
+            </a>
+          </div>
+          <div class="card-content">
+            <p class="card-desc ls-0">
+              This is a dedicated unit within a residential care facility or
+              nursing home that provides specialized care for individuals with
+              memory-related disorders, including dementia.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="col-10 offset-1 col-sm-8 offset-sm-2 col-lg-4 offset-lg-0 mt-3"
+      >
+        <div class="card hover-icon">
+          <div class="card-heading">
+            <a href="departments-detailed.html">
+              <figure>
+                <i class="fal fa-head-side-brain"></i>
+              </figure>
+            </a>
+            <a href="departments-detailed.html">
+              <h4 class="card-title">Dementia<br />Care</h4>
+            </a>
+          </div>
+          <div class="card-content">
+            <p class="card-desc ls-0">
+              Similar to a memory care unit, this is a department within a
+              healthcare facility specifically designed to address the needs of
+              individuals with dementia.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="col-10 offset-1 col-sm-8 offset-sm-2 col-lg-4 offset-lg-0 mt-3"
+      >
+        <div class="card hover-icon">
+          <div class="card-heading">
+            <a href="departments-detailed.html">
+              <figure>
+                <i class="fal fa-heart-rate"></i>
+              </figure>
+            </a>
+            <a href="departments-detailed.html">
+              <h4 class="card-title">Alzheimer's <br />Care</h4>
+            </a>
+          </div>
+          <div class="card-content">
+            <p class="card-desc ls-0">
+              Some facilities may have units specifically labeled as Alzheimer's
+              care units, indicating a focus on individuals with Alzheimer's
+              disease, the most common form of dementia.
+            </p>
+          </div>
+        </div>
+      </div> -->
+      {% for i in departData %}
+      <div
+        class="col-10 offset-1 col-sm-8 offset-sm-2 col-lg-4 offset-lg-0 mt-3"
+      >
+        <div class="card hover-icon">
+          <div class="card-heading">
+            <a>
+              <figure>
+                <i class="{{i.depart_icons}}"></i>
+              </figure>
+            </a>
+            <a>
+              <h4 class="card-title">{{i.depart_title}}</h4>
+            </a>
+          </div>
+          <div class="card-content">
+            <p class="card-desc ls-0">{{i.depart_desc}}</p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+
+      <!-- <div
+        class="col-10 offset-1 col-sm-8 offset-sm-2 col-lg-4 offset-lg-0 mt-3"
+      >
+        <div class="card hover-icon">
+          <div class="card-heading">
+            <a href="departments-detailed.html">
+              <figure>
+                <i class="fal fa-head-side-brain"></i>
+              </figure>
+            </a>
+            <a href="departments-detailed.html">
+              <h4 class="card-title">
+                Geriatric <br />
+                Psychiatry
+              </h4>
+            </a>
+          </div>
+          <div class="card-content">
+            <p class="card-desc ls-0">
+              In larger healthcare institutions, there might be specialized
+              departments or units within psychiatry that focus on the mental
+              health and well-being of elderly individuals, including those with
+              dementia.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="col-10 offset-1 col-sm-8 offset-sm-2 col-lg-4 offset-lg-0 mt-3"
+      >
+        <div class="card hover-icon">
+          <div class="card-heading">
+            <a href="departments-detailed.html">
+              <figure>
+                <i class="fal fa-heart-rate"></i>
+              </figure>
+            </a>
+            <a href="departments-detailed.html">
+              <h4 class="card-title">
+                Seniors<br />
+                Behavioral Health
+              </h4>
+            </a>
+          </div>
+          <div class="card-content">
+            <p class="card-desc ls-0">
+              This type of unit may provide care for seniors experiencing
+              behavioral and cognitive challenges, often including those with
+              dementia.
+            </p>
+          </div>
+        </div>
+      </div> -->
+    </div>
+  </div>
+  <!------------------------------------------------
+            explore section - start
+			------------------------------------------------>
+  <!--<div class="bg-light-color explore-section">
+				<div class="container">
+					<h2 class="ls-n-20 text-center section-heading">More to explore.</h2>
+                    <div class="explore-section-row">
+                        <div class="image-box explore-card text-center">
+                            <a href="appointment-step1.html">
+                                <figure>
+                                    <img src="assets/images/banner/explore-1.jpg" class="w-100" alt="Blog">
+                                    <div class="hover">
+                                        <div class="circle">
+                                            <i class="fas fa-link"></i>
+                                        </div>
+                                    </div>
+                                </figure>
+                                <div class="box-content">
+                                    <h4 class="box-title">Book an<br>appointment</h4>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="image-box explore-card text-center">
+                            <a href="how-it-works.html">
+                            <figure>
+                                <img src="assets/images/banner/explore-2.jpg" class="w-100" alt="Blog">
+                                <div class="hover">
+                                    <div class="circle">
+                                        <i class="fas fa-link"></i>
+                                    </div>
+                                </div>
+                            </figure>
+                            <div class="box-content">
+                                <h4 class="box-title">How does<br>it work?</h4>
+                            </div>
+                            </a>
+                        </div>
+                        <div class="image-box explore-card text-center">
+                            <a href="treatments.html">
+                            <figure>
+                                <img src="assets/images/banner/explore-3.jpg" class="w-100" alt="Blog">
+                                <div class="hover">
+                                    <div class="circle">
+                                        <i class="fas fa-link"></i>
+                                    </div>
+                                </div>
+                            </figure>
+                            <div class="box-content">
+                                <h4 class="box-title">What we<br>treat</h4>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+				</div>
+			</div>-->
+  <!------------------------------------------------
+            explore section - end
+			------------------------------------------------>
+</main>
+<!------------------------------------------------
+		footer - start
+		------------------------------------------------>
+{% include 'footer.html' %}
